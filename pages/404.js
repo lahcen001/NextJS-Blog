@@ -1,23 +1,22 @@
-import React, { useEffect } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React, { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 const Error = () => {
-    const router = useRouter();git
-    useEffect(() => {
-        setTimeout(() => {
-            router.push('/');
-        }, 3000)
+  const router = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
+  }, []);
 
-    }, []
+  return (
+    <div>
+      <h1>Page not Found</h1>
+      <Link href="/">
+        <a>GO home</a>
+      </Link>
+    </div>
+  );
+};
 
-    )
-
-    return (
-        <div>
-            <h1>Page not Found</h1>
-            <Link href="/"><a >GO home</a></Link>
-        </div>
-    )
-}
-
-export default Error
+export default Error;
